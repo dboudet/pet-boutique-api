@@ -31,6 +31,6 @@ exports.createCustomer = (req,res) => {
     }
     const db = connectDb()
     db.collection('customers').add(req.body)
-        .then( docRef => res.status(201).send('Customer created'))
+        .then( () => res.status(201).send({message: 'Customer created'}))
         .catch(err => res.status(500).send(err))
 }

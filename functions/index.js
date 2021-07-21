@@ -7,12 +7,13 @@ app.use(cors())
 app.use(express.json())
 
 const { getCustomers , createCustomer } = require('./src/customers')
+const { getPets , addPet } = require('./src/pets')
 
 //routes go here
 app.get('/customers', getCustomers)
 
 app.post('/customers', createCustomer)
-
+app.post('/pets', addPet)
 
 exports.app = functions.https.onRequest(app)
 
