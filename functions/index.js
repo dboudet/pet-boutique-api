@@ -11,6 +11,7 @@ const { getPets , addPet } = require('./src/pets')
 
 //routes go here
 app.get('/customers', getCustomers)
+app.get('/pets', getPets)
 
 app.post('/customers', createCustomer)
 app.post('/pets', addPet)
